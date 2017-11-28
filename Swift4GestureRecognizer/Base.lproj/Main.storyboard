@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,73 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift4GestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woodStockAndSnoopy" translatesAutoresizingMaskIntoConstraints="NO" id="tpf-sw-b0W">
+                                <rect key="frame" x="187" y="30" width="161" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Nbs-Ur-Cmf" appends="YES" id="9nb-WK-S8H"/>
+                                    <outletCollection property="gestureRecognizers" destination="n44-Si-2xV" appends="YES" id="qpF-Fl-0x4"/>
+                                    <outletCollection property="gestureRecognizers" destination="xwL-q8-6mI" appends="YES" id="SBU-XY-duE"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snoopyDance00" translatesAutoresizingMaskIntoConstraints="NO" id="XLp-A4-iD2">
+                                <rect key="frame" x="65" y="189" width="167" height="205"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3zI-aA-2Am" appends="YES" id="GH9-9e-auB"/>
+                                    <outletCollection property="gestureRecognizers" destination="iqC-pP-A4c" appends="YES" id="MQF-ky-MyN"/>
+                                    <outletCollection property="gestureRecognizers" destination="sAN-VW-V6P" appends="YES" id="0sV-Ea-ktv"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="3zI-aA-2Am">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="BYZ-38-t0r" id="kSF-Ln-Zk6"/>
+                    </connections>
+                </panGestureRecognizer>
+                <rotationGestureRecognizer id="iqC-pP-A4c">
+                    <connections>
+                        <action selector="handleRotate:" destination="BYZ-38-t0r" id="ldV-er-ku2"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="sAN-VW-V6P">
+                    <connections>
+                        <action selector="handlePinchWithRecognizer:" destination="BYZ-38-t0r" id="wuX-Lv-u1X"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Nbs-Ur-Cmf">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="BYZ-38-t0r" id="FmW-uE-r0D"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="n44-Si-2xV">
+                    <connections>
+                        <action selector="handlePinchWithRecognizer:" destination="BYZ-38-t0r" id="X9E-3z-tRC"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="xwL-q8-6mI">
+                    <connections>
+                        <action selector="handleRotate:" destination="BYZ-38-t0r" id="cKm-fw-Ljd"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="snoopyDance00" width="120" height="200"/>
+        <image name="woodStockAndSnoopy" width="134" height="100"/>
+    </resources>
 </document>
